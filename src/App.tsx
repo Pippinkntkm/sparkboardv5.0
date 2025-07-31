@@ -8,7 +8,7 @@ import Contact from './pages/Contact'
 function App() {
   return (
     <Router>
-      <div className="h-screen">
+      <div className="h-screen bg-gradient-to-br from-boomerang-navy via-boomerang-blue to-boomerang-light-blue relative overflow-hidden">
         <Navbar1 />
         <Routes>
           <Route path="/" element={<Home />} />

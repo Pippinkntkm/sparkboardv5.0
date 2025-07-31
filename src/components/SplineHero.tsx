@@ -8,7 +8,7 @@ import { BackgroundPathsHero } from "./BackgroundPathsHero"
  
 export function SplineHero() {
   return (
-    <div className="w-full h-full bg-gradient-to-br from-boomerang-navy via-boomerang-blue to-boomerang-light-blue relative overflow-hidden">
+    <div className="w-full h-full relative overflow-hidden">
       <BackgroundPathsHero />
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
