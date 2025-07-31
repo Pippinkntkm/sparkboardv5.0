@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom'
 import { SplineScene } from "./ui/spline";
 import { Card } from "./ui/card"
 import { Spotlight } from "./ui/spotlight"
+import { BackgroundPathsHero } from "./BackgroundPathsHero"
  
 export function SplineHero() {
   return (
     <div className="w-full h-full bg-gradient-to-br from-boomerang-navy via-boomerang-blue to-boomerang-light-blue relative overflow-hidden">
+      <BackgroundPathsHero />
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
