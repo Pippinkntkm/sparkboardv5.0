@@ -7,13 +7,13 @@ import { Spotlight } from "./ui/spotlight"
  
 export function SplineHero() {
   return (
-    <div className="w-full min-h-[90vh] bg-gradient-to-br from-boomerang-navy via-boomerang-blue to-boomerang-light-blue relative overflow-hidden">
+    <div className="w-full h-full bg-gradient-to-br from-boomerang-navy via-boomerang-blue to-boomerang-light-blue relative overflow-hidden">
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
       />
       
-      <div className="flex h-full min-h-[90vh]">
+      <div className="flex h-full">
         {/* Left content */}
         <div className="flex-1 p-8 md:p-12 relative z-10 flex flex-col justify-center">
           <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-boomerang-silver mb-6">

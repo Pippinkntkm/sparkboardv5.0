@@ -10,14 +10,14 @@ const Home = () => {
   ]
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="w-full">
+    <div className="h-screen flex flex-col">
+      {/* Hero Section - Takes up most of the screen */}
+      <section className="flex-1">
         <SplineHero />
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16">
+      {/* Stats Section - Fixed at bottom */}
+      <section className="py-8 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -33,8 +33,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-
     </div>
   )
 }
