@@ -21,7 +21,7 @@ export function SplineHero() {
           {/* Spacer to push content to 1/3 from top */}
           <div className="flex-shrink-0" style={{ flexBasis: '33%' }} />
           <div>
-            <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-boomerang-silver mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-boomerang-silver mb-6 leading-[1.1] pb-2">
               Boomerang Startups Sparkboard
             </h1>
             <p className="text-xl md:text-2xl text-white max-w-2xl mb-8">
