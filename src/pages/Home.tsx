@@ -12,10 +12,8 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20">
-        <div className="container-custom">
-          <SplineHero />
-        </div>
+      <section className="w-full">
+        <SplineHero />
       </section>
 
       {/* Stats Section */}
