@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { SplineHero } from '../components/SplineHero'
 
 const Home = () => {
   const features = [
@@ -50,50 +51,9 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-boomerang-navy via-boomerang-blue to-boomerang-light-blue text-white">
-        <div className="container-custom py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Launch Your Startup
-                <span className="block text-boomerang-silver">Into Success</span>
-              </h1>
-              <p className="text-xl mb-8 text-boomerang-silver">
-                Boomerang Startups provides comprehensive support to help entrepreneurs 
-                build, launch, and scale their innovative ideas into successful businesses.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contact" className="btn-primary bg-white text-boomerang-blue hover:bg-gray-100">
-                  Get Started Today
-                </Link>
-                <Link to="/services" className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white hover:text-boomerang-blue">
-                  Learn More
-                </Link>
-              </div>
-            </div>
-            <div className="hidden lg:block">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                    <span className="text-sm">Market Research Complete</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                    <span className="text-sm">Funding Round in Progress</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                    <span className="text-sm">Team Building Phase</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
-                    <span className="text-sm">Launch Preparation</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <section className="py-20">
+        <div className="container-custom">
+          <SplineHero />
         </div>
       </section>
 
