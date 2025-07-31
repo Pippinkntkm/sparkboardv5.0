@@ -15,13 +15,15 @@ const Navbar1 = () => {
       <div className="flex items-center justify-between px-6 py-3 bg-white/10 backdrop-blur-md rounded-full shadow-lg w-full max-w-3xl relative z-10 border border-white/20">
         <div className="flex items-center">
           <motion.div
-            className="mr-6"
+            className="w-8 h-8 mr-6"
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             whileHover={{ rotate: 10 }}
             transition={{ duration: 0.3 }}
           >
-            <span className="text-xl font-bold text-white">Boomerang</span>
+            <div className="w-full h-full bg-gradient-to-br from-boomerang-blue to-boomerang-light-blue rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">B</span>
+            </div>
           </motion.div>
         </div>
         
