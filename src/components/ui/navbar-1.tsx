@@ -21,8 +21,8 @@ const Navbar1 = () => {
             whileHover={{ rotate: 10 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="w-full h-full bg-gradient-to-br from-boomerang-blue to-boomerang-light-blue rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">B</span>
+            <div className="w-full h-full bg-gradient-to-br from-boomerang-silver to-boomerang-light-blue rounded-lg flex items-center justify-center">
+                              <span className="text-boomerang-navy font-bold text-sm">B</span>
             </div>
           </motion.div>
         </div>
@@ -54,7 +54,7 @@ const Navbar1 = () => {
         >
           <a
             href="#"
-            className="inline-flex items-center justify-center px-5 py-2 text-sm text-white bg-black rounded-full hover:bg-gray-800 transition-colors"
+            className="inline-flex items-center justify-center px-5 py-2 text-sm text-white bg-boomerang-navy rounded-full hover:bg-boomerang-black transition-colors"
           >
             Login
           </a>
@@ -110,7 +110,7 @@ const Navbar1 = () => {
               >
                 <a
                   href="#"
-                  className="inline-flex items-center justify-center w-full px-5 py-3 text-base text-white bg-black rounded-full hover:bg-gray-800 transition-colors "
+                  className="inline-flex items-center justify-center w-full px-5 py-3 text-base text-white bg-boomerang-navy rounded-full hover:bg-boomerang-black transition-colors "
                   onClick={toggleMenu}
                 >
                   Login
