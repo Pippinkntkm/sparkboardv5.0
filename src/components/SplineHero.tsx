@@ -17,7 +17,7 @@ export function SplineHero() {
         {/* Left content */}
         <div className="flex-1 p-8 md:p-12 relative z-10 flex flex-col justify-center">
           <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-boomerang-silver mb-6">
-            Launch Your Startup
+            Boomerang Startups Sparkboard
           </h1>
           <p className="text-xl md:text-2xl text-white max-w-2xl mb-8">
             Bring your innovative ideas to life with cutting-edge 3D technology. 
