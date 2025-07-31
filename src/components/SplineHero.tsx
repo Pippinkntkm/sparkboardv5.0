@@ -17,7 +17,7 @@ export function SplineHero() {
       
       <div className="flex h-full">
         {/* Left content */}
-        <div className="flex-1 p-8 md:p-12 relative z-10 flex flex-col justify-center">
+        <div className="flex-1 p-8 md:p-12 relative z-10 flex flex-col justify-end pb-16">
           <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-boomerang-silver mb-6">
             Boomerang Startups Sparkboard
           </h1>
