@@ -6,10 +6,9 @@ const Navbar = () => {
   const location = useLocation()
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Founders', path: '/founders' },
+    { name: 'ROO-AI', path: '/roo-ai' },
   ]
 
   const isActive = (path: string) => location.pathname === path
@@ -43,13 +42,13 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* Login Button */}
           <div className="hidden md:block">
             <Link
-              to="/contact"
+              to="/login"
               className="btn-primary"
             >
-              Get Started
+              Login
             </Link>
           </div>
 
@@ -90,11 +89,11 @@ const Navbar = () => {
               ))}
               <div className="pt-4">
                 <Link
-                  to="/contact"
+                  to="/login"
                   className="btn-primary w-full text-center block"
                   onClick={() => setIsOpen(false)}
                 >
-                  Get Started
+                  Login
                 </Link>
               </div>
             </div>
