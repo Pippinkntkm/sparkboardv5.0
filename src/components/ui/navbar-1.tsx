@@ -4,6 +4,7 @@ import * as React from "react"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const Navbar1 = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,32 +15,38 @@ const Navbar1 = () => {
     <div className="flex justify-center w-full py-6 px-4">
       <div className="flex items-center justify-between px-6 py-3 bg-boomerang-navy/20 backdrop-blur-md rounded-full shadow-lg w-full max-w-3xl relative z-10 border border-boomerang-silver/30">
         <div className="flex items-center">
-          <motion.div
-            className="w-8 h-8 mr-6"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            whileHover={{ rotate: 10 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="w-full h-full bg-gradient-to-br from-boomerang-silver to-boomerang-light-blue rounded-lg flex items-center justify-center">
-                              <span className="text-boomerang-navy font-bold text-sm">B</span>
-            </div>
-          </motion.div>
+                    <Link to="/">
+            <motion.div
+              className="w-8 h-8 mr-6"
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              whileHover={{ rotate: 10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="w-full h-full bg-gradient-to-br from-boomerang-silver to-boomerang-light-blue rounded-lg flex items-center justify-center">
+                <span className="text-boomerang-navy font-bold text-sm">B</span>
+              </div>
+            </motion.div>
+          </Link>
         </div>
         
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {["Projects", "Founders", "ROO-AI"].map((item) => (
+            {[
+              { name: "Projects", path: "/projects" },
+              { name: "Founders", path: "/founders" },
+              { name: "ROO-AI", path: "/roo-ai" }
+            ].map((item) => (
               <motion.div
-                key={item}
+                key={item.name}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
                 whileHover={{ scale: 1.05 }}
               >
-                <a href="#" className="text-sm text-boomerang-silver hover:text-white transition-colors font-medium">
-                  {item}
-                </a>
+                <Link to={item.path} className="text-sm text-boomerang-silver hover:text-white transition-colors font-medium">
+                  {item.name}
+                </Link>
               </motion.div>
             ))}
           </nav>
@@ -52,12 +59,12 @@ const Navbar1 = () => {
           transition={{ duration: 0.3, delay: 0.2 }}
           whileHover={{ scale: 1.05 }}
         >
-          <a
-            href="#"
+          <Link
+            to="/login"
             className="inline-flex items-center justify-center px-5 py-2 text-sm text-white bg-boomerang-navy rounded-full hover:bg-boomerang-black transition-colors"
           >
             Login
-          </a>
+          </Link>
         </motion.div>
 
         {/* Mobile Menu Button */}
@@ -87,17 +94,21 @@ const Navbar1 = () => {
               <X className="h-6 w-6 text-gray-900" />
             </motion.button>
             <div className="flex flex-col space-y-6">
-              {["Projects", "Founders", "ROO-AI"].map((item, i) => (
+              {[
+                { name: "Projects", path: "/projects" },
+                { name: "Founders", path: "/founders" },
+                { name: "ROO-AI", path: "/roo-ai" }
+              ].map((item, i) => (
                 <motion.div
-                  key={item}
+                  key={item.name}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 + 0.1 }}
                   exit={{ opacity: 0, x: 20 }}
                 >
-                  <a href="#" className="text-base text-gray-900 font-medium" onClick={toggleMenu}>
-                    {item}
-                  </a>
+                  <Link to={item.path} className="text-base text-gray-900 font-medium" onClick={toggleMenu}>
+                    {item.name}
+                  </Link>
                 </motion.div>
               ))}
 
@@ -108,13 +119,13 @@ const Navbar1 = () => {
                 exit={{ opacity: 0, y: 20 }}
                 className="pt-6"
               >
-                <a
-                  href="#"
+                <Link
+                  to="/login"
                   className="inline-flex items-center justify-center w-full px-5 py-3 text-base text-white bg-boomerang-navy rounded-full hover:bg-boomerang-black transition-colors "
                   onClick={toggleMenu}
                 >
                   Login
-                </a>
+                </Link>
               </motion.div>
             </div>
           </motion.div>
