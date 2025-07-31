@@ -19,10 +19,46 @@ export function SplineHero() {
           <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-boomerang-silver mb-6">
             Boomerang Startups Sparkboard
           </h1>
-          <p className="text-xl md:text-2xl text-white max-w-2xl">
+          <p className="text-xl md:text-2xl text-white max-w-2xl mb-8">
             Bring your innovative ideas to life with cutting-edge 3D technology. 
             Create immersive experiences that capture investor attention and accelerate your growth.
           </p>
+          
+          {/* Stats Section */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div className="text-center">
+              <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                150+
+              </div>
+              <div className="text-sm md:text-base text-boomerang-silver font-medium">
+                Startups Launched
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                $50M+
+              </div>
+              <div className="text-sm md:text-base text-boomerang-silver font-medium">
+                Funding Raised
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                95%
+              </div>
+              <div className="text-sm md:text-base text-boomerang-silver font-medium">
+                Success Rate
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                24/7
+              </div>
+              <div className="text-sm md:text-base text-boomerang-silver font-medium">
+                Support Available
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Right content - Isolated Robot with Transparent Background */}
