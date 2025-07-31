@@ -3,7 +3,7 @@ import { SplineHero } from '../components/SplineHero'
 
 const Home = () => {
   return (
-    <div className="h-screen w-full">
+    <div className="h-[calc(100vh-120px)] w-full">
       <SplineHero />
     </div>
   )
