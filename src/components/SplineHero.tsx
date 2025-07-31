@@ -20,8 +20,7 @@ export function SplineHero() {
             Boomerang Startups Sparkboard
           </h1>
           <p className="text-xl md:text-2xl text-white max-w-2xl mb-8">
-            Bring your innovative ideas to life with cutting-edge 3D technology. 
-            Create immersive experiences that capture investor attention and accelerate your growth.
+            Startup streamliner powered by AI
           </p>
           
           {/* Stats Section */}
