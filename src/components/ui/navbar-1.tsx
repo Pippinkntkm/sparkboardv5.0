@@ -13,7 +13,7 @@ const Navbar1 = () => {
 
   return (
     <div className="flex justify-center w-full py-6 px-4">
-      <div className="flex items-center justify-between px-6 py-3 bg-boomerang-navy/20 backdrop-blur-md rounded-full shadow-lg w-full max-w-3xl relative z-10 border border-boomerang-silver/30">
+      <div className="flex items-center justify-between px-6 py-3 bg-white/10 backdrop-blur-md rounded-full shadow-lg w-full max-w-3xl relative z-10 border border-white/20">
         <div className="flex items-center">
                     <Link to="/">
             <motion.div
@@ -44,7 +44,7 @@ const Navbar1 = () => {
                 transition={{ duration: 0.3 }}
                 whileHover={{ scale: 1.05 }}
               >
-                <Link to={item.path} className="text-sm text-boomerang-silver hover:text-white transition-colors font-medium">
+                <Link to={item.path} className="text-sm text-white hover:text-boomerang-silver transition-colors font-medium">
                   {item.name}
                 </Link>
               </motion.div>
@@ -69,7 +69,7 @@ const Navbar1 = () => {
 
         {/* Mobile Menu Button */}
         <motion.button className="md:hidden flex items-center" onClick={toggleMenu} whileTap={{ scale: 0.9 }}>
-          <Menu className="h-6 w-6 text-boomerang-silver" />
+          <Menu className="h-6 w-6 text-white" />
         </motion.button>
       </div>
 

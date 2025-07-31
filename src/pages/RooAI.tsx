@@ -86,16 +86,16 @@ const RooAI = () => {
   }
 
   return (
-    <div className="h-[calc(100vh-120px)] w-full bg-gradient-to-br from-boomerang-silver via-boomerang-light-blue to-boomerang-blue flex flex-col">
+    <div className="h-[calc(100vh-120px)] w-full flex flex-col relative z-10">
       {/* Header */}
-      <div className="flex items-center justify-center p-6 border-b border-boomerang-navy/20">
+      <div className="flex items-center justify-center p-6 border-b border-boomerang-silver/20">
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 bg-gradient-to-br from-boomerang-light-blue to-boomerang-blue rounded-full flex items-center justify-center">
             <Bot className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-boomerang-navy">ROO-AI</h1>
-            <p className="text-sm text-boomerang-navy/70">Your Startup Assistant</p>
+            <h1 className="text-2xl font-bold text-boomerang-silver">ROO-AI</h1>
+            <p className="text-sm text-boomerang-silver/70">Your Startup Assistant</p>
           </div>
         </div>
       </div>
@@ -110,8 +110,8 @@ const RooAI = () => {
             <div
                               className={`max-w-[70%] rounded-2xl px-4 py-3 ${
                   message.sender === 'user'
-                    ? 'bg-boomerang-navy text-white'
-                    : 'bg-white/80 text-boomerang-navy border border-boomerang-navy/20'
+                    ? 'bg-boomerang-light-blue text-white'
+                    : 'bg-boomerang-silver/10 text-boomerang-silver border border-boomerang-silver/20'
                 }`}
             >
               <div className="flex items-start space-x-2">
@@ -134,7 +134,7 @@ const RooAI = () => {
         
         {isLoading && (
           <div className="flex justify-start">
-            <div className="bg-white/80 text-boomerang-navy border border-boomerang-navy/20 rounded-2xl px-4 py-3">
+            <div className="bg-boomerang-silver/10 text-boomerang-silver border border-boomerang-silver/20 rounded-2xl px-4 py-3">
               <div className="flex items-center space-x-2">
                 <Bot className="w-5 h-5 text-boomerang-light-blue" />
                 <div className="flex space-x-1">
@@ -151,7 +151,7 @@ const RooAI = () => {
       </div>
 
       {/* Input Area */}
-      <div className="p-4 border-t border-boomerang-navy/20">
+      <div className="p-4 border-t border-boomerang-silver/20">
         <div className="flex items-end space-x-3">
           <div className="flex-1 relative">
             <textarea
@@ -159,7 +159,7 @@ const RooAI = () => {
               onChange={(e) => setInputText(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Ask me anything about your startup..."
-              className="w-full bg-white/80 border border-boomerang-navy/20 rounded-2xl px-4 py-3 text-boomerang-navy placeholder-boomerang-navy/50 resize-none focus:outline-none focus:border-boomerang-navy transition-colors"
+              className="w-full bg-boomerang-silver/10 border border-boomerang-silver/20 rounded-2xl px-4 py-3 text-boomerang-silver placeholder-boomerang-silver/50 resize-none focus:outline-none focus:border-boomerang-light-blue transition-colors"
               rows={1}
               style={{ minHeight: '48px', maxHeight: '120px' }}
             />
@@ -167,7 +167,7 @@ const RooAI = () => {
           <button
             onClick={handleSendMessage}
             disabled={!inputText.trim() || isLoading}
-            className="bg-boomerang-navy hover:bg-boomerang-black disabled:bg-boomerang-navy/30 disabled:cursor-not-allowed text-white rounded-2xl p-3 transition-colors"
+            className="bg-boomerang-light-blue hover:bg-boomerang-blue disabled:bg-boomerang-silver/30 disabled:cursor-not-allowed text-white rounded-2xl p-3 transition-colors"
           >
             <Send className="w-5 h-5" />
           </button>
@@ -179,7 +179,7 @@ const RooAI = () => {
             <button
               key={suggestion}
               onClick={() => setInputText(suggestion)}
-              className="text-xs bg-white/80 hover:bg-white text-boomerang-navy px-3 py-1 rounded-full border border-boomerang-navy/20 transition-colors"
+              className="text-xs bg-boomerang-silver/10 hover:bg-boomerang-silver/20 text-boomerang-silver px-3 py-1 rounded-full border border-boomerang-silver/20 transition-colors"
             >
               {suggestion}
             </button>

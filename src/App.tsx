@@ -13,6 +13,7 @@ function App() {
   return (
     <Router>
       <div className="h-screen bg-gradient-to-br from-boomerang-black via-boomerang-navy to-boomerang-blue relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-boomerang-black via-boomerang-navy to-boomerang-blue"></div>
         <Navbar1 />
         <Routes>
           <Route path="/" element={<Home />} />
