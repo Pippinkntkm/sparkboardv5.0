@@ -3,8 +3,7 @@ import { SplineHero } from '../components/SplineHero'
 
 const Home = () => {
   return (
-    <div className="h-screen">
-      {/* Hero Section with integrated stats */}
+    <div className="h-screen w-full">
       <SplineHero />
     </div>
   )
