@@ -54,12 +54,12 @@ const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-r from-boomerang-navy to-boomerang-blue text-white py-20">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             About Boomerang Startups
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-boomerang-silver max-w-3xl mx-auto">
             We're a team of passionate entrepreneurs, investors, and industry experts 
             dedicated to helping startups succeed in today's competitive landscape.
           </p>
@@ -71,16 +71,16 @@ const About = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-boomerang-black mb-6">
                 Our Mission
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-boomerang-black mb-6">
                 At Boomerang Startups, we believe that every great idea deserves the 
                 opportunity to become a successful business. Our mission is to provide 
                 entrepreneurs with the resources, guidance, and support they need to 
                 turn their vision into reality.
               </p>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-boomerang-black mb-8">
                 Since our founding in 2018, we've helped over 150 startups launch and 
                 scale their businesses, collectively raising more than $50 million in 
                 funding and creating thousands of jobs.
@@ -89,15 +89,15 @@ const About = () => {
                 Get in Touch
               </Link>
             </div>
-            <div className="bg-gray-100 rounded-2xl p-8">
+            <div className="bg-boomerang-silver rounded-2xl p-8">
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 bg-boomerang-blue rounded-lg flex items-center justify-center text-white font-bold">
                     150+
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Startups Launched</div>
-                    <div className="text-gray-600">Successfully launched and scaled</div>
+                    <div className="font-semibold text-boomerang-black">Startups Launched</div>
+                    <div className="text-boomerang-black">Successfully launched and scaled</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -105,8 +105,8 @@ const About = () => {
                     $50M+
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Funding Raised</div>
-                    <div className="text-gray-600">Collective funding secured</div>
+                    <div className="font-semibold text-boomerang-black">Funding Raised</div>
+                    <div className="text-boomerang-black">Collective funding secured</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -114,8 +114,8 @@ const About = () => {
                     95%
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Success Rate</div>
-                    <div className="text-gray-600">Startups still operating</div>
+                    <div className="font-semibold text-boomerang-black">Success Rate</div>
+                    <div className="text-boomerang-black">Startups still operating</div>
                   </div>
                 </div>
               </div>
@@ -125,13 +125,13 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-boomerang-silver">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-boomerang-black mb-4">
               Our Values
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-boomerang-black max-w-3xl mx-auto">
               These core values guide everything we do and shape how we work with our clients.
             </p>
           </div>
@@ -140,10 +140,10 @@ const About = () => {
             {values.map((value, index) => (
               <div key={index} className="text-center p-6 bg-white rounded-xl shadow-lg">
                 <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-boomerang-black mb-3">
                   {value.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-boomerang-black">
                   {value.description}
                 </p>
               </div>
@@ -156,10 +156,10 @@ const About = () => {
       <section className="py-20">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-boomerang-black mb-4">
               Meet Our Team
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-boomerang-black max-w-3xl mx-auto">
               Our experienced team brings together diverse expertise in entrepreneurship, 
               technology, marketing, and operations.
             </p>
@@ -175,13 +175,13 @@ const About = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                <h3 className="text-xl font-semibold text-boomerang-black mb-1">
                   {member.name}
                 </h3>
-                <p className="text-blue-600 font-medium mb-3">
+                <p className="text-boomerang-blue font-medium mb-3">
                   {member.role}
                 </p>
-                <p className="text-gray-600 text-sm">
+                <p className="text-boomerang-black text-sm">
                   {member.bio}
                 </p>
               </div>
@@ -191,15 +191,15 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-boomerang-blue text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Work With Us?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-boomerang-silver mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help you build and scale your startup to new heights.
           </p>
-          <Link to="/contact" className="btn-primary bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+          <Link to="/contact" className="btn-primary bg-white text-boomerang-blue hover:bg-gray-100 text-lg px-8 py-3">
             Schedule a Consultation
           </Link>
         </div>

@@ -50,23 +50,23 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
+      <section className="bg-gradient-to-br from-boomerang-navy via-boomerang-blue to-boomerang-light-blue text-white">
         <div className="container-custom py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 Launch Your Startup
-                <span className="block text-blue-200">Into Success</span>
+                <span className="block text-boomerang-silver">Into Success</span>
               </h1>
-              <p className="text-xl mb-8 text-blue-100">
+              <p className="text-xl mb-8 text-boomerang-silver">
                 Boomerang Startups provides comprehensive support to help entrepreneurs 
                 build, launch, and scale their innovative ideas into successful businesses.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contact" className="btn-primary bg-white text-blue-600 hover:bg-gray-100">
+                <Link to="/contact" className="btn-primary bg-white text-boomerang-blue hover:bg-gray-100">
                   Get Started Today
                 </Link>
-                <Link to="/services" className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600">
+                <Link to="/services" className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white hover:text-boomerang-blue">
                   Learn More
                 </Link>
               </div>
@@ -98,15 +98,15 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-boomerang-silver">
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-boomerang-blue mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 font-medium">
+                <div className="text-boomerang-black font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -119,10 +119,10 @@ const Home = () => {
       <section className="py-20">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-boomerang-black mb-4">
               Why Choose Boomerang Startups?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-boomerang-black max-w-3xl mx-auto">
               We provide comprehensive support at every stage of your startup journey, 
               from ideation to scale and beyond.
             </p>
@@ -131,13 +131,13 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 text-blue-600">
+                <div className="w-12 h-12 bg-boomerang-silver rounded-lg flex items-center justify-center mx-auto mb-4 text-boomerang-blue">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-boomerang-black mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-boomerang-black">
                   {feature.description}
                 </p>
               </div>
@@ -147,16 +147,16 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-900 text-white">
+      <section className="py-20 bg-boomerang-black text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Launch Your Startup?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-boomerang-silver mb-8 max-w-2xl mx-auto">
             Join hundreds of successful entrepreneurs who have transformed their ideas 
             into thriving businesses with our support.
           </p>
-          <Link to="/contact" className="btn-primary bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3">
+          <Link to="/contact" className="btn-primary bg-boomerang-blue hover:bg-boomerang-navy text-lg px-8 py-3">
             Start Your Journey Today
           </Link>
         </div>

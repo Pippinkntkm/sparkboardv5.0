@@ -20,10 +20,10 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-boomerang-blue rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">B</span>
             </div>
-            <span className="text-xl font-bold text-gray-800">Boomerang Startups</span>
+            <span className="text-xl font-bold text-boomerang-black">Boomerang Startups</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -34,8 +34,8 @@ const Navbar = () => {
                 to={item.path}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   isActive(item.path)
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                    ? 'text-boomerang-blue bg-boomerang-silver'
+                    : 'text-gray-600 hover:text-boomerang-blue hover:bg-boomerang-silver'
                 }`}
               >
                 {item.name}
@@ -57,7 +57,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+              className="text-gray-600 hover:text-boomerang-blue focus:outline-none focus:text-boomerang-blue"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
@@ -73,15 +73,15 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-boomerang-silver rounded-lg mt-2">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                     isActive(item.path)
-                      ? 'text-blue-600 bg-blue-100'
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-blue-100'
+                      ? 'text-boomerang-blue bg-boomerang-silver'
+                      : 'text-gray-600 hover:text-boomerang-blue hover:bg-boomerang-silver'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >

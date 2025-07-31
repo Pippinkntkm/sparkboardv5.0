@@ -88,10 +88,10 @@ const Contact = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl font-bold text-boomerang-black mb-4">
             Thank You!
           </h2>
-          <p className="text-gray-600 mb-8">
+          <p className="text-boomerang-black mb-8">
             Your message has been sent successfully. We'll get back to you within 24 hours.
           </p>
           <button
@@ -108,12 +108,12 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-r from-boomerang-navy to-boomerang-blue text-white py-20">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Get in Touch
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-boomerang-silver max-w-3xl mx-auto">
             Ready to start your startup journey? Let's discuss how we can help 
             you turn your vision into a successful business.
           </p>
@@ -126,7 +126,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              <h2 className="text-3xl font-bold text-boomerang-black mb-8">
                 Send us a Message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">

@@ -133,7 +133,7 @@ const Services = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-r from-boomerang-navy to-boomerang-blue text-white py-20">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Our Services
@@ -149,10 +149,10 @@ const Services = () => {
       <section className="py-20">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-boomerang-black mb-4">
               What We Offer
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-boomerang-black max-w-3xl mx-auto">
               Our services are designed to address the most critical challenges 
               that startups face in their journey to success.
             </p>
@@ -161,20 +161,20 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-blue-600">
+                <div className="w-16 h-16 bg-boomerang-silver rounded-lg flex items-center justify-center mb-6 text-boomerang-blue">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl font-bold text-boomerang-black mb-4">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-boomerang-black mb-6">
                   {service.description}
                 </p>
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">What's included:</h4>
+                  <h4 className="font-semibold text-boomerang-black mb-3">What's included:</h4>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-600">
+                      <li key={featureIndex} className="flex items-center text-boomerang-black">
                         <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
@@ -184,7 +184,7 @@ const Services = () => {
                   </ul>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-blue-600">
+                  <span className="text-2xl font-bold text-boomerang-blue">
                     {service.price}
                   </span>
                   <Link to="/contact" className="btn-primary">
@@ -198,13 +198,13 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-boomerang-silver">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-boomerang-black mb-4">
               Our Process
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-boomerang-black max-w-3xl mx-auto">
               We follow a proven methodology that ensures your startup gets the 
               support it needs at every stage of development.
             </p>
@@ -213,13 +213,13 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((step, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-6">
+                <div className="w-16 h-16 bg-boomerang-blue rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-6">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-boomerang-black mb-3">
                   {step.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-boomerang-black">
                   {step.description}
                 </p>
               </div>
@@ -229,20 +229,20 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-boomerang-blue text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-boomerang-silver mb-8 max-w-2xl mx-auto">
             Let's discuss your startup needs and create a customized plan 
             to help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-primary bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+            <Link to="/contact" className="btn-primary bg-white text-boomerang-blue hover:bg-gray-100 text-lg px-8 py-3">
               Schedule a Consultation
             </Link>
-            <Link to="/about" className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3">
+            <Link to="/about" className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white hover:text-boomerang-blue text-lg px-8 py-3">
               Learn More About Us
             </Link>
           </div>
