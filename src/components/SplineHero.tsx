@@ -1,15 +1,11 @@
 'use client'
 
-import { Link } from 'react-router-dom'
 import { SplineScene } from "./ui/spline";
-import { Card } from "./ui/card"
 import { Spotlight } from "./ui/spotlight"
-import { BackgroundPathsHero } from "./BackgroundPathsHero"
  
 export function SplineHero() {
   return (
     <div className="w-full h-full relative overflow-hidden">
-      <BackgroundPathsHero />
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
@@ -32,34 +28,34 @@ export function SplineHero() {
           <div className="mt-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 pb-8">
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-boomerang-light-blue mb-1">
-                150+
+                110+
               </div>
               <div className="text-sm md:text-base text-boomerang-silver font-medium">
-                Startups Launched
+                Startups in Waiting List
               </div>
             </div>
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-boomerang-light-blue mb-1">
-                $50M+
+                87%
               </div>
               <div className="text-sm md:text-base text-boomerang-silver font-medium">
-                Funding Raised
+                Satisfactory Score
               </div>
             </div>
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-boomerang-light-blue mb-1">
-                95%
+                42%
               </div>
               <div className="text-sm md:text-base text-boomerang-silver font-medium">
-                Success Rate
+                Projects Reworked Post Roo
               </div>
             </div>
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-boomerang-light-blue mb-1">
-                24/7
+                24+
               </div>
               <div className="text-sm md:text-base text-boomerang-silver font-medium">
-                Support Available
+                Sectors Covered
               </div>
             </div>
           </div>

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { SplineHero } from '../components/SplineHero'
 
 const Home = () => {
