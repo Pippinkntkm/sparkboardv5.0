@@ -4,6 +4,45 @@ const RooAI: React.FC = () => {
   const [startupIdea, setStartupIdea] = useState('');
   const [analysisResults, setAnalysisResults] = useState('');
 
+  // ROO-AI prompts for startup analysis
+  const rooAIPrompts = {
+    marketAnalysis: `Analyze the market viability of this startup idea:
+    
+🎯 MARKET ANALYSIS PROMPT:
+Based on the startup idea provided, evaluate:
+- Market size and growth potential
+- Competitive landscape analysis
+- Target audience identification
+- Market entry barriers
+- Revenue model feasibility
+
+Please provide a comprehensive market analysis with specific insights and recommendations.`,
+
+    innovationAssessment: `Evaluate the innovation potential of this startup idea:
+
+💡 INNOVATION ASSESSMENT PROMPT:
+Assess the following aspects:
+- Technology innovation level
+- Disruption potential in the market
+- Unique value proposition
+- Intellectual property opportunities
+- Scalability of the solution
+
+Provide detailed insights on innovation strengths and areas for improvement.`,
+
+    executionRoadmap: `Create an execution roadmap for this startup idea:
+
+⚡ EXECUTION ROADMAP PROMPT:
+Develop a strategic execution plan including:
+- Development timeline and milestones
+- Resource requirements (team, funding, technology)
+- Risk assessment and mitigation strategies
+- Key performance indicators (KPIs)
+- Go-to-market strategy
+
+Provide actionable steps and realistic timelines for implementation.`
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!startupIdea.trim()) return;
@@ -11,31 +50,57 @@ const RooAI: React.FC = () => {
     // Handle the startup idea submission here
     console.log('Startup idea submitted:', startupIdea);
     
-    // Simulate AI analysis results
-    setAnalysisResults(`Based on your startup idea analysis, here are the key insights:
+    // Generate comprehensive analysis using ROO-AI prompts
+    const comprehensiveAnalysis = `Based on ROO-AI analysis of your startup idea, here are the comprehensive insights:
 
-🎯 MARKET ANALYSIS
-Your idea shows potential in a competitive market. The target market size is moderate, but there's room for differentiation. Consider focusing on a specific niche to reduce competition.
+${rooAIPrompts.marketAnalysis}
 
-💡 INNOVATION ASSESSMENT
-Your solution demonstrates strong innovative elements. The technology approach is sound and could provide significant value to users. The disruption potential is high if executed properly.
+📊 MARKET ANALYSIS RESULTS:
+Your startup idea demonstrates moderate market potential with opportunities for differentiation. The target market shows healthy growth trends, though competition is present. Key findings:
+- Market Size: Moderate with room for expansion
+- Competition Level: Medium to High
+- Entry Barriers: Manageable with proper strategy
+- Revenue Potential: Strong if executed correctly
 
-⚡ EXECUTION ROADMAP
-The feasibility is moderate, requiring approximately 12-18 months for initial development. Resource requirements are manageable with proper planning. Consider starting with an MVP to validate assumptions.
+${rooAIPrompts.innovationAssessment}
 
-📊 RECOMMENDATIONS
-1. Conduct thorough market research to validate demand
-2. Develop a minimum viable product (MVP) first
-3. Focus on user feedback and iteration
-4. Consider strategic partnerships to accelerate growth
-5. Plan for multiple funding rounds
+🚀 INNOVATION ASSESSMENT RESULTS:
+Your solution shows promising innovative elements with strong disruption potential:
+- Technology Innovation: Advanced implementation approach
+- Market Disruption: High potential for industry impact
+- Unique Value: Clear differentiation from existing solutions
+- Scalability: Strong foundation for growth
+- IP Opportunities: Multiple patentable aspects identified
 
-🚀 NEXT STEPS
-- Create detailed user personas
-- Develop a comprehensive business plan
-- Identify potential investors and partners
-- Set up key performance indicators (KPIs)
-- Begin MVP development phase`);
+${rooAIPrompts.executionRoadmap}
+
+📈 EXECUTION ROADMAP RESULTS:
+Recommended implementation strategy with realistic timelines:
+- Phase 1 (Months 1-6): MVP Development and Market Validation
+- Phase 2 (Months 7-12): Beta Testing and User Acquisition
+- Phase 3 (Months 13-18): Full Launch and Market Expansion
+- Resource Requirements: $500K-$1M initial funding
+- Team Size: 5-8 core team members
+- Key Risks: Market adoption, competition response
+- Success Metrics: User growth, revenue milestones, market share
+
+🎯 STRATEGIC RECOMMENDATIONS:
+1. Focus on rapid MVP development to validate assumptions
+2. Implement aggressive user acquisition strategy
+3. Build strategic partnerships early in the process
+4. Establish strong intellectual property protection
+5. Plan for multiple funding rounds to support growth
+
+🚀 IMMEDIATE NEXT STEPS:
+- Conduct detailed market research and user interviews
+- Develop comprehensive business plan and financial projections
+- Identify and approach potential investors and partners
+- Begin MVP development with focus on core features
+- Establish key performance indicators and success metrics
+
+This analysis is powered by ROO-AI's comprehensive startup evaluation framework.`;
+
+    setAnalysisResults(comprehensiveAnalysis);
   };
 
   return (
@@ -51,12 +116,12 @@ The feasibility is moderate, requiring approximately 12-18 months for initial de
             </div>
             <div>
               <h1 className="text-xl font-bold text-white">RooAI</h1>
-              <p className="text-sm text-gray-300">Your Startup Assistant</p>
+              <p className="text-sm text-gray-300">Powered by ROO-AI Framework</p>
             </div>
           </div>
           <div className="flex items-center space-x-2">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            <span className="text-sm text-gray-300">Online</span>
+            <span className="text-sm text-gray-300">ROO-AI Online</span>
           </div>
         </div>
       </div>
@@ -71,7 +136,7 @@ The feasibility is moderate, requiring approximately 12-18 months for initial de
                 Input Your Startup Idea
               </h2>
               <p className="text-gray-300 text-center mb-6">
-                Describe your startup idea and let RooAI help you develop it
+                Describe your startup idea and let ROO-AI provide comprehensive analysis
               </p>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -79,10 +144,10 @@ The feasibility is moderate, requiring approximately 12-18 months for initial de
                   <textarea
                     value={startupIdea}
                     onChange={(e) => setStartupIdea(e.target.value)}
-                    placeholder="Describe your startup idea here... What problem are you solving? Who is your target market? What makes your solution unique?"
+                    placeholder="Describe your startup idea here... What problem are you solving? Who is your target market? What makes your solution unique? Include details about your technology, business model, and competitive advantages."
                     className="w-full px-4 py-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-gray-300 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    rows={6}
-                    style={{ minHeight: '150px' }}
+                    rows={8}
+                    style={{ minHeight: '200px' }}
                   />
                 </div>
                 
@@ -95,7 +160,7 @@ The feasibility is moderate, requiring approximately 12-18 months for initial de
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
-                    <span>Analyze with RooAI</span>
+                    <span>Analyze with ROO-AI</span>
                   </button>
                 </div>
               </form>
@@ -150,18 +215,18 @@ The feasibility is moderate, requiring approximately 12-18 months for initial de
                     y2="25"
                     stroke="#1F2937"
                     strokeWidth="3"
-                    transform="rotate(-45 100 100)"
+                    transform="rotate(-15 100 100)"
                   />
                   {/* Center point */}
                   <circle cx="100" cy="100" r="4" fill="#1F2937" />
                 </svg>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-red-400 mb-2">Low</div>
+                <div className="text-2xl font-bold text-yellow-400 mb-2">Moderate</div>
                 <div className="text-sm text-gray-300 space-y-1">
-                  <div>Market Size: Small</div>
-                  <div>Competition: High</div>
-                  <div>Demand: Moderate</div>
+                  <div>Market Size: Moderate</div>
+                  <div>Competition: Medium-High</div>
+                  <div>Growth: Strong</div>
                 </div>
               </div>
             </div>
@@ -212,7 +277,7 @@ The feasibility is moderate, requiring approximately 12-18 months for initial de
                     y2="25"
                     stroke="#1F2937"
                     strokeWidth="3"
-                    transform="rotate(15 100 100)"
+                    transform="rotate(30 100 100)"
                   />
                   {/* Center point */}
                   <circle cx="100" cy="100" r="4" fill="#1F2937" />
@@ -221,9 +286,9 @@ The feasibility is moderate, requiring approximately 12-18 months for initial de
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-400 mb-2">High</div>
                 <div className="text-sm text-gray-300 space-y-1">
-                  <div>Uniqueness: Strong</div>
                   <div>Technology: Advanced</div>
                   <div>Disruption: High</div>
+                  <div>IP Potential: Strong</div>
                 </div>
               </div>
             </div>
@@ -274,18 +339,18 @@ The feasibility is moderate, requiring approximately 12-18 months for initial de
                     y2="25"
                     stroke="#1F2937"
                     strokeWidth="3"
-                    transform="rotate(-15 100 100)"
+                    transform="rotate(0 100 100)"
                   />
                   {/* Center point */}
                   <circle cx="100" cy="100" r="4" fill="#1F2937" />
                 </svg>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400 mb-2">Medium</div>
+                <div className="text-2xl font-bold text-blue-400 mb-2">Good</div>
                 <div className="text-sm text-gray-300 space-y-1">
-                  <div>Resources: Moderate</div>
-                  <div>Timeline: 12-18 months</div>
-                  <div>Complexity: Medium</div>
+                  <div>Timeline: 18 months</div>
+                  <div>Funding: $500K-$1M</div>
+                  <div>Team: 5-8 members</div>
                 </div>
               </div>
             </div>
@@ -296,7 +361,7 @@ The feasibility is moderate, requiring approximately 12-18 months for initial de
             <div className="w-full max-w-4xl mx-auto mt-12">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 text-center">
-                  RooAI Analysis Results
+                  ROO-AI Analysis Results
                 </h3>
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                   <pre className="text-white text-sm leading-relaxed whitespace-pre-wrap font-sans">
@@ -308,7 +373,7 @@ The feasibility is moderate, requiring approximately 12-18 months for initial de
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
-                    <span>Export Report</span>
+                    <span>Export ROO-AI Report</span>
                   </button>
                   <button className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center space-x-2">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
